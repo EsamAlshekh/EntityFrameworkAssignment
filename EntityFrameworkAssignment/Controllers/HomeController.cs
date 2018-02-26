@@ -239,5 +239,6 @@ namespace EntityFrameworkAssignment.Controllers
 
             return RedirectToAction("AddAssignmentToCourse", new { id = id });
         }
+        //The Last
     }
 }
