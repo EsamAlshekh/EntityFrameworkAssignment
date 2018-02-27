@@ -27,3 +27,21 @@
     @Html.ActionLink("AddStudentToCourse", "AddStudentToCourse", new { id = Model.CourseID }) |
     @Html.ActionLink("AddAssignmentToCourse", "AddAssignmentToCourse", new { id = Model.CourseID })
 </p>
+<div class="row">
+    @foreach (var item in Model.Students)
+    {
+        <div class="">@item.StudentID - @item.StudentName</div>
+    }
+</div>
+<div class="row">
+    @foreach (var item1 in Model.Teachers)
+    {
+        <div class="">@item1.TeacherID - @item1.TeacherName</div>
+    }
+</div>
+<div class="row">
+    @foreach (var item2 in Model.Assignments)
+    {
+        <div class="">@item2.AssignmentID - @item2.AssignmentName</div>
+    }
+</div>

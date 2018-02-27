@@ -39,7 +39,7 @@ namespace EntityFrameworkAssignment.Controllers
         // GET: Course/Details/5
         public ActionResult Details(int id)
         {
-            var Course = db.Courses.Find(id);
+            var Course = db.Courses.Include("Students").Include("Teachers").Include("Assignments").SingleOrDefault(s => s.CourseID == id);
             if (Course == null)
             {
                 return HttpNotFound();

@@ -24,7 +24,10 @@
             </td>
             <td>
                 @Html.ActionLink("Add", "AddStudent", new { sId = item.StudentID, id = ViewBag.courseId })
-
+                @*@Html.BeginForm("Add", "AddStudent", new { sId = item.StudentID, id = ViewBag.courseId })
+                {
+                
+                }*@
             </td>
         </tr>
     }
